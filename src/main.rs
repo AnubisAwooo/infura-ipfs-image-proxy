@@ -1,5 +1,3 @@
-// use hyper::{Body, Client, Request, Uri};
-// use hyper_tls::HttpsConnector;
 use salvo::prelude::*;
 
 async fn get(
@@ -9,7 +7,7 @@ async fn get(
     headers: &mut http::header::HeaderMap,
 ) -> Result<Vec<u8>, Box<dyn std::error::Error>> {
     let response =
-        reqwest::get("https://mora.infura-ipfs.io/ipfs/{id}".replace("{id}", &id)).await?;
+        reqwest::get("https://xxx.infura-ipfs.io/ipfs/{id}".replace("{id}", &id)).await?;
 
     // println!("Status: {}", response.status());
 
