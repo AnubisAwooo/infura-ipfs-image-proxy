@@ -73,7 +73,7 @@ async fn do_proxy(req: &mut Request, resp: &mut Response) {
 #[tokio::main]
 async fn main() {
     let router = Router::with_path("ipfs/<id>").get(do_proxy);
-    Server::new(TcpListener::bind("127.0.0.1:7878"))
+    Server::new(TcpListener::bind("0.0.0.0:6025"))
         .serve(router)
         .await;
 }
